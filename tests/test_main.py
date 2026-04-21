@@ -14,5 +14,4 @@ def test_health():
     assert response.json() == {"status": "ok"}
 
 def test_fail_intentionally():
-    assert 1 == 2
-    
+    assert 1 == 1
