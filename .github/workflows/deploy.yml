@@ -1,11 +1,9 @@
-# Push → GitHub Actions runs → builds Docker image
 name: CI pipeline
 
 on:
   push:
     branches:
-      - main
-
+      - main        
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,5 +11,5 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: BUILD Docker Image
+      - name: Build Docker Image
         run: docker build -t fastapi-app .
